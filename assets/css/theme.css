@@ -1349,6 +1349,8 @@ progress {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: 50%;
+    height: 30%;
+    margin: 0 0 1rem;
   }
   .col-md-7 {
     -webkit-box-flex: 0;
@@ -3769,6 +3771,7 @@ fieldset:disabled .btn {
   color: rgb(110, 25, 25);
   background-color: #F9FAFD;
   border-color: #F9FAFD;
+  
 }
 
 .btn-light#mal{
@@ -9148,8 +9151,8 @@ fieldset:disabled .btn {
 }
 
 .py-11 {
-  padding-top: 15rem !important;
-  padding-bottom: 15rem !important;
+  padding-top: 8rem !important;
+  padding-bottom: 13rem !important;
 }
 
 .pt-0 {
@@ -17621,10 +17624,10 @@ ul {
 .flex-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content:center;
 }
 
 .flex-between-center {
@@ -18387,6 +18390,7 @@ ul {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border: 0;
+  justify-content: right;
 }
 
 .card-span .card-span-img {
