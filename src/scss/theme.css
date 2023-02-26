@@ -95,6 +95,52 @@ h1, .h1 {
   font-size: calc(1.37383rem + 1.48598vw);
 }
 
+/*Api de spotify*/
+
+.form-ls{
+  padding: auto;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.btn.dropdown-toggle  {
+  width:150px;
+  text-align:left;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 10%;
+}
+
+label {
+  padding-top:5px;
+}
+
+.form-label {
+  padding-left:0px !important;
+}
+
+
+img {
+  width:140px;
+  height:140px;
+}
+
+.btn-success {
+  background-color: #005800!important;
+}
+
+.btn-success:hover {
+  background-color: #d63600!important;
+}
+
+img.track {
+  border: 1px solid #8a8a8a;
+}
+/*Fin api de spotify*/
+
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.48832rem;
@@ -1115,6 +1161,7 @@ progress {
             flex: 0 0 auto;
     width: 83.33333%;
   }
+
   .col-sm-11 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
@@ -3614,9 +3661,9 @@ fieldset:disabled .btn {
 }
 
 .btn-success {
-  color: #4B5D68;
-  background-color: #68C9BA;
-  border-color: #68C9BA;
+  color: #135e8c;
+  background-color: #23ceb5;
+  border-color: #021613;
 }
 
 .btn-success:hover {
@@ -8945,6 +8992,7 @@ fieldset:disabled .btn {
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
+
 }
 
 .px-1 {
