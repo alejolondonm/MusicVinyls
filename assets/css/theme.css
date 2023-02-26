@@ -9400,6 +9400,7 @@ fieldset:disabled .btn {
 }
 
 .px-2 {
+  cursor: pointer;
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important;
 }

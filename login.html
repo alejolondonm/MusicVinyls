@@ -54,31 +54,34 @@
     <section>
 
       <div class="container">
-        <form onsubmit="loginFunc()"></form>
-        <div class="row h-100 g-0">
-          <div class="col-md-6">
-            <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
-              <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Entra a tu cuenta</h1>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Usuario</p>
-                <input type="text" id="userlog" name="user" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Contraseña</p>
-                <input type="password" id="clavelog" name="clave1" class="form-control" required/>
-              </div>
-              <p></p>
-              <div class="d-grid gap-2 d-md-block">
-                <a class="btn btn-lg btn-dark" href="#!" role="button">Iniciar Sesión</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="registrate.html">¿No tienes cuenta? Registrate</a></li></ul>
+        <form onsubmit="loginFunc()">
+          <div class="row h-100 g-0">
+            <div class="col-md-6">
+              <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
+                <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Entra a tu cuenta</h1>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Usuario</p>
+                  <input type="text" id="userlog" name="user" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Contraseña</p>
+                  <input type="password" id="clavelog" name="clave1" class="form-control" required/>
+                </div>
+                <p></p>
+                <p id="result" class="mb-5 fs-1">¡Hola de nuevo!</p>
+                <p></p>
+                <div class="d-grid gap-2 d-md-block">
+                  <button type="submit" class="btn btn-lg btn-dark">Iniciar Sesión</button>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="registrate.html">¿No tienes cuenta? Registrate</a></li></ul>
+                </div>
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/sharp-dress.png" alt="..." /><a class="stretched-link" href="#!"></a></div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/sharp-dress.png" alt="..." /><a class="stretched-link" href="#!"></a></div>
-          </div>
-        </div>
+      </form>
       </div>
       <!-- end of .container-->
 
