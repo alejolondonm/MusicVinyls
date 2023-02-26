@@ -16,6 +16,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="assets/css/theme.css" rel="stylesheet" />
+
+    <!--Función procesar datos-->
+
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
@@ -54,46 +58,47 @@
     <section>
 
       <div class="container">
+        <form onsubmit="registro()">
         <div class="row h-100 g-0">
-          <div class="col-md-6">
-            <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
-              <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Crea tu cuenta</h1>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Nombre</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Apellido</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Usuario</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Correo</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Celular</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Contraseña</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="form-group">
-                <p class="mb-5 fs-1">Validar contraseña</p>
-                <input type="text" id="nombre" class="form-control" required/>
-              </div>
-              <div class="d-grid gap-2 d-md-block">
-                <p class="mb-5 fs-1"></p>
-                <a class="btn btn-lg btn-dark" href="#!" role="button">Iniciar Sesión</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="promos.html">¿No tienes cuenta? Registrate</a></li></ul>
+            <div class="col-md-6">
+              <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
+                <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Crea tu cuenta</h1>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Nombre</p>
+                  <input type="text" id="nombre" name="nombre" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Apellido</p>
+                  <input type="text" id="apellido" name="apellido" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Usuario</p>
+                  <input type="text" id="user" name="user" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Correo electrónico</p>
+                  <input type="email" id="email" name="email" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Celular</p>
+                  <input type="tel" id="celular" name="celular" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Contraseña</p>
+                  <input type="password" id="clave1" name="clave1" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                  <p class="mb-5 fs-1">Validar contraseña</p>
+                  <input type="password" id="clave2" name="clave2" class="form-control" required/>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                  <p class="mb-5 fs-1"></p>
+                  <button  type="submit" class="btn btn-lg btn-dark" href="#!">Regístrate</button>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="login.html">¿Ya tienes cuenta? Inicia Sesión</a></li></ul>
+                </div>
               </div>
             </div>
-          </div>
           <div class="col-md-6">
             <div class="card card-span h-100 text-white">
               <img class="card-img h-100" src="assets/img/gallery/bgregis.jpg" alt="..." />
@@ -103,6 +108,7 @@
             </div>
           </div>
         </div>
+      </form>
       </div>
       <!-- end of .container-->
 
