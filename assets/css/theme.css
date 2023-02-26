@@ -9723,6 +9723,12 @@ fieldset:disabled .btn {
   padding-bottom: 1%;
 }
 
+.fs-1#result{
+  font-size: 1.2rem !important;
+  padding-bottom: 1%;
+  color: rgb(110, 25, 25);
+}
+
 .fs-2 {
   font-size: 1.44rem !important;
 }

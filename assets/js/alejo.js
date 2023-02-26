@@ -52,7 +52,6 @@ function loginFunc(e) {
     var data = JSON.parse(username);
     console.log(data);
 
-    /*
     if (username == null) {
         result.innerHTML = 'Usuario incorrecto';
     }
@@ -62,5 +61,4 @@ function loginFunc(e) {
     else {
         result.innerHTML = 'Contraseña incorrecta';
     }
-    */
 }
