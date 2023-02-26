@@ -56,7 +56,7 @@
     <section>
 
       <div class="container">
-        <form id = "form-demo" novalidate method="post" onsubmit="registro()">
+        <form id = "form-demo" novalidate method="post">
           <div class="row h-100 g-0">
               <div class="col-md-6">
                 <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
@@ -81,6 +81,7 @@
                     <p class="mb-5 fs-1">Celular</p>
                     <input type="number" id="celular" name="celular" class="form-control" required/>
                   </div>
+                  <!--
                   <div class="form-group">
                     <p class="mb-5 fs-1">Género Musical Favorito</p>
                     <select class="select1" required>
@@ -96,6 +97,7 @@
                       <option value="alternativo">Alternativo</option>
                     </select>
                   </div>
+                  -->
                   <div class="form-group">
                     <p class="mb-5 fs-1">Contraseña</p>
                     <input type="password" id="clave1" name="clave1" class="form-control" required/>
@@ -106,7 +108,7 @@
                   </div>
                   <div class="d-grid gap-2 d-md-block">
                     <p class="mb-5 fs-1"></p>
-                    <button type="submit" class="btn btn-lg btn-dark">Regístrate</button>
+                    <button type="submit" class="btn btn-lg btn-dark" onclick="registro()">Regístrate</button>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" onclick="toLogin()"">¿Ya tienes cuenta? Inicia Sesión</a></li></ul>
                   </div>
