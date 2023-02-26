@@ -96,13 +96,6 @@ h1, .h1 {
 }
 
 /*Api de spotify*/
-
-.form-ls{
-  padding: auto;
-  align-items:center;
-  justify-content: space-between;
-}
-
 .btn.dropdown-toggle  {
   width:150px;
   text-align:left;
@@ -122,18 +115,17 @@ label {
   padding-left:0px !important;
 }
 
-
 img {
   width:140px;
   height:140px;
 }
 
 .btn-success {
-  background-color: #005800!important;
+  background-color: #464746!important;
 }
 
 .btn-success:hover {
-  background-color: #d63600!important;
+  background-color: #464746!important;
 }
 
 img.track {
@@ -715,7 +707,7 @@ progress {
 }
 
 .row {
-  --bs-gutter-x: 2rem;
+  --bs-gutter-x: 0rem;
   --bs-gutter-y: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1122,7 +1114,7 @@ progress {
   .col-sm-4 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+            flex: 1 0 auto;
     width: 33.33333%;
   }
   .col-sm-5 {
@@ -1136,6 +1128,7 @@ progress {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 50%;
+    padding-bottom: 13px;
   }
   .col-sm-7 {
     -webkit-box-flex: 0;
@@ -1178,7 +1171,7 @@ progress {
     margin-left: 0;
   }
   .offset-sm-1 {
-    margin-left: 8.33333%;
+    margin-left: 5.33333%;
   }
   .offset-sm-2 {
     margin-left: 16.66667%;
@@ -3661,9 +3654,9 @@ fieldset:disabled .btn {
 }
 
 .btn-success {
-  color: #135e8c;
-  background-color: #23ceb5;
-  border-color: #021613;
+  color: #4B5D68;
+  background-color: #68C9BA;
+  border-color: #68C9BA;
 }
 
 .btn-success:hover {
@@ -8992,7 +8985,6 @@ fieldset:disabled .btn {
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
-
 }
 
 .px-1 {
