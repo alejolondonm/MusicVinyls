@@ -3982,7 +3982,8 @@ fieldset:disabled .btn {
 
 .btn-dark {
   color: #fffefe;
-  background-color: #212121;
+  justify-content: center;
+  background-color: #a8471a;
   border-color: #212121;
 }
 
@@ -8343,6 +8344,10 @@ fieldset:disabled .btn {
   flex-direction: column !important;
 }
 
+.form-group {
+  justify-content: space-between;
+}
+
 .flex-row-reverse {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: reverse !important;
@@ -8922,7 +8927,8 @@ fieldset:disabled .btn {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 .mb-6 {
@@ -9713,6 +9719,7 @@ fieldset:disabled .btn {
 
 .fs-1 {
   font-size: 1.2rem !important;
+  padding-bottom: 1%;
 }
 
 .fs-2 {
