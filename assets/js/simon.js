@@ -1,3 +1,18 @@
+//Navegación centralizada
+let pages = document.querySelectorAll('.nav_link');
+let menu_pg = [];
+
+console.log(pages);
+
+
+
+
+
+
+
+
+
+//Spotify API
 const APIController = (function () {
 
     const clientId = '77991a3d03b245ee8812b13d309e692e'; //Mi ID de cliente de api spotify (simón)
