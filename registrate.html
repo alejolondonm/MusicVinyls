@@ -17,10 +17,8 @@
 
     <link href="assets/css/theme.css" rel="stylesheet" />
 
-    <!--Función procesar datos-->
-
-
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><img class="d-inline-block" src="assets/img/gallery/vinyl.png" alt="logo" /><span class="text-1000 fs-0 fw-bold ms-2">Music Vinyls</span></a>
@@ -81,7 +79,22 @@
                   </div>
                   <div class="form-group">
                     <p class="mb-5 fs-1">Celular</p>
-                    <input type="tel" id="celular" name="celular" class="form-control" required/>
+                    <input type="number" id="celular" name="celular" class="form-control" required/>
+                  </div>
+                  <div class="form-group">
+                    <p class="mb-5 fs-1">Género Musical Favorito</p>
+                    <select class="select1" required>
+                      <option value="none"></option>
+                      <option value="pop">Pop</option>
+                      <option value="rock">Rock</option>
+                      <option value="country">Country</option>
+                      <option value="folk">Folk</option>
+                      <option value="clasica">Clásica</option>
+                      <option value="reggaeton">Reggaeton</option>
+                      <option value="metal">Metal</option>
+                      <option value="r&b">R&B</option>
+                      <option value="alternativo">Alternativo</option>
+                    </select>
                   </div>
                   <div class="form-group">
                     <p class="mb-5 fs-1">Contraseña</p>

@@ -1,4 +1,4 @@
-let imagen, btn_cerrar, titulo, mensaje;
+let logeo = false;
 
 function toLogin() {
     location.href = "login.html";
@@ -31,7 +31,7 @@ function registro(e) {
         var json = JSON.stringify(myUser);
         localStorage.setItem(user, json);
         console.log('¡Usuario creado con éxito!');
-        alert('¡Usuario creado con éxito!');
+        //alert('¡Usuario creado con éxito!');
         location.href = "login.html";
     }
     else {
