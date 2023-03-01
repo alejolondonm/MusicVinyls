@@ -5,13 +5,6 @@ let menu_pg = [];
 console.log(pages);
 
 
-
-
-
-
-
-
-
 //Spotify API
 const APIController = (function () {
 
@@ -19,7 +12,7 @@ const APIController = (function () {
     const clientSecret = '18719a58001c424dbede9f96bbd90928'; //Mi client secret de api spotify (simón)
 
     // Métodos privados
-    const _getToken = async () => {
+    const _getToken = async () => { //Solicitud, obtener token, obtiene los datos
 
         const result = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
@@ -34,7 +27,7 @@ const APIController = (function () {
         return data.access_token;
     }
 
-    const _getGenres = async (token) => {
+    const _getGenres = async (token) => { //Get a generos
 
         const result = await fetch(`https://api.spotify.com/v1/browse/categories?locale=sv_US`, {
             method: 'GET',
