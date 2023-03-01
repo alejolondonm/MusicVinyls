@@ -1,14 +1,40 @@
+function toBlog() {
+    location.href = "blog.html";
+}
 
+function toCollection() {
+    location.href = "collection.html";
+}
+
+function toIndex() {
+    location.href = "index.html";
+}
+
+function toNewArrivals() {
+    location.href = "newArrivals.html";
+}
+
+function toPromos() {
+    location.href = "promos.html";
+}
 
 function toLogin() {
     location.href = "login.html";
 }
 
-function toPromos() {
-    let isLogged = localStorage.getItem("isLogged");
+function toRegistro() {
+    location.href = "registrate.html";
+}
 
-    if (isLogged === 'true')
-        location.href = "promos.html";
+function toVinyls() {
+    location.href = "vinyls.html";
+}
+
+function toAPI() {
+    //let isLogged = localStorage.getItem("isLogged");
+
+    //if (isLogged === 'true')
+    location.href = "spotifyapi/playlist.html";
 }
 
 
