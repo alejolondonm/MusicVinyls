@@ -59,7 +59,7 @@
     <section>
 
       <div class="container">
-        <form id = "form-demo" novalidate method="post">
+        <form id = "form-demo" novalidate method="post" onsubmit="registro()">
           <div class="row h-100 g-0">
               <div class="col-md-6">
                 <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
@@ -111,7 +111,7 @@
                   </div>
                   <div class="d-grid gap-2 d-md-block">
                     <p class="mb-5 fs-1"></p>
-                    <button type="submit" class="btn btn-lg btn-dark" onclick="registro()">Regístrate</button>
+                    <button type="submit" class="btn btn-lg btn-dark">Regístrate</button>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" onclick="toLogin()"">¿Ya tienes cuenta? Inicia Sesión</a></li></ul>
                   </div>
