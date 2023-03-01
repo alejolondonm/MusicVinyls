@@ -18,19 +18,24 @@
     <link href="assets/css/theme.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-    <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><img class="d-inline-block" src="assets/img/gallery/vinyl.png" alt="logo" /><span class="text-1000 fs-0 fw-bold ms-2">Music Vinyls</span></a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
+    data-navbar-on-scroll="data-navbar-on-scroll">
+    <div class="container"><a class="navbar-brand d-inline-flex" onclick="toIndex()"><img class="d-inline-block"
+          src="assets/img/gallery/vinyl.png" alt="logo" /><span class="text-1000 fs-0 fw-bold ms-2">Music
+          Vinyls</span></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page"
-              href="promos.html">Descuentos</a></li>
-          <li class="nav-item px-2"><a class="nav-link fw-medium" href="vinyls.html">Vinilos</a></li>
+              onclick="toPromos()">Descuentos</a></li>
+          <li class="nav-item px-2"><a class="nav-link fw-medium" onclick="toVinyls()">Vinilos</a></li>
           <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page"
-              href="newArrivals.html">¡Lo Nuevo!</a></li>
-          <li class="nav-item px-2"><a class="nav-link fw-medium" href="collection.html">Colección</a></li>
-          <li class="nav-item px-2"><a class="nav-link fw-medium" href="blog.html">Blog</a></li>
-          <li class="nav-item px-2"><a class="nav-link fw-medium" href="spotifyapi/playlist.html">Spotify Playlists</a></li>
+              onclick="toNewArrivals()">¡Lo Nuevo!</a></li>
+          <li class="nav-item px-2"><a class="nav-link fw-medium" onclick="toCollection()">Colección</a></li>
+          <li class="nav-item px-2"><a class="nav-link fw-medium" onclick="toBlog()">Blog</a></li>
+          <li class="nav-item px-2"><a class="nav-link fw-medium" onclick="toAPI()">Spotify Playlists</a></li>
         </ul>
         <form class="d-flex">
           <a id = "iniciosesion" class="text-1000" href="login.html">Iniciar Sesión
