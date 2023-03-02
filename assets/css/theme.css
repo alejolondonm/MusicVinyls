@@ -2856,6 +2856,10 @@ progress {
   margin-inline-end: 3rem;
 }
 
+.ocultar{
+  display: none !important;
+}
+
 textarea.form-control {
   min-height: calc(1.5em + 1rem + 2px);
 }
