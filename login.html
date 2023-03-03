@@ -56,26 +56,30 @@
     
     <section>
       <div class="container">
-        <form onsubmit="loginFunc()">
+        <form action="" id="frm_login" class="needs-validation" novalidate>
           <div class="row h-100 g-0">
             <div class="col-md-6">
               <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
                 <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Entra a tu cuenta</h1>
-                <div class="form-group">
-                  <p class="mb-5 fs-1">Usuario</p>
-                  <input type="text" id="userlog" name="user" class="form-control" required/>
-                </div>
-                <div class="form-group">
-                  <p class="mb-5 fs-1">Contraseña</p>
-                  <input type="password" id="clavelog" name="clave1" class="form-control" required/>
-                </div>
-                <p></p>
-                <p id="result" class="mb-5 fs-1"></p>
-                <p></p>
+                <label class="mb-5 fs-1" for="usuario">
+                  Nombre de usuario
+                  <input type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario" required>
+                  <div class="invalid-feedback">
+                    Ingresa un usuario válido
+                  </div>
+                </label>
+                <label class="mb-5 fs-1" for="clave">
+                  Contraseña
+                  <input type="password" class="form-control" id="clave" placeholder="Ingrese su contraseña" required>
+                  <div class="invalid-feedback">
+                    Verifica tu contraseña
+                  </div>
+                </label>
+                <br>
                 <div class="d-grid gap-2 d-md-block">
-                  <button type="submit" class="btn btn-lg btn-dark">Iniciar Sesión</button>
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="registrate.html">¿No tienes cuenta? Registrate</a></li></ul>
+                  <input type="submit" id="btn_enviar" class="btn btn-lg btn-dark" id="inicio" value="Iniciar Sesión">
+                  <br>
+                  <a class="nav-link fw-medium active" href="javascript:void();" id="btn_ir_a_registro">¿No tienes cuenta? Regístrate</a>&nbsp;&nbsp;
                 </div>
               </div>
             </div>
@@ -83,6 +87,102 @@
               <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/sharp-dress.png" alt="..." /><a class="stretched-link" href="#!"></a></div>
             </div>
           </div>
+      </form>
+      <form id="form_registro" action="" class="needs-validation ocultar" novalidate>
+        <div class="row h-100 g-0">
+            <div class="col-md-6">
+              <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
+                <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Crea tu cuenta</h1>
+                <!--NOMBRE-->
+                <label class="mb-5 fs-1" for="nombre">Nombre
+                    <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                    <div class="invalid-feedback">
+                      Ingresa un nombre válido
+                    </div>
+                </label>
+                <!--APELLIDO-->
+                <label class="mb-5 fs-1" for="apellido">Apellido
+                  <input type="text" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                  <div class="invalid-feedback">
+                    Ingresa un apellido válido
+                  </div>
+                </label>
+                <!--USUARIO-->
+                <label class="mb-5 fs-1" for="apellido">Usuario
+                  <input type="text" id="usuario" class="form-control" placeholder="Ingrese su usuario" required>
+                  <div class="invalid-feedback">
+                    Ingresa un usuario válido
+                  </div>
+                </label>
+                <!--CORREO-->
+                <label class="mb-5 fs-1" for="correo">Correo electrónico
+                  <input type="email" id="email" class="form-control" placeholder="Ingrese su correo" required>
+                  <div class="invalid-feedback">
+                    Ingresa un correo válido
+                  </div>
+                </label>
+                <!--CELULAR-->
+                <label class="mb-5 fs-1" for="celular">Celular
+                  <input type="number" id="celular" class="form-control" placeholder="Ingrese su celular" required>
+                  <div class="invalid-feedback">
+                    Ingresa un celular válido
+                  </div>
+                </label>
+                <!--GÉNERO MUSICAL-->
+                <label class="mb-5 fs-1" for="genero">Género Musical Favorito
+                  <select type="text" class="form-control" id="genero" required>
+                    <option value="">Seleccione uno</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="country">Country</option>
+                    <option value="folk">Folk</option>
+                    <option value="clasica">Clásica</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                    <option value="r&b">R&B</option>
+                    <option value="hiphop">Hip hop</option>
+                    <option value="alternativo">Alternativo</option>
+                    <option value="reggaeton">Reggaeton</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Elige una de las opciones
+                  </div>
+                </label>
+                <!--CONTRASEÑA-->
+                <label class="mb-5 fs-1" for="clave">Contraseña
+                  <input type="password" id="clave1" class="form-control" placeholder="Ingrese su contraseña" required>
+                  <div class="invalid-feedback">
+                    Ingresa una contraseña válida
+                  </div>
+                </label>
+                <!--VALIDAR CONTRASEÑA-->
+                <label class="mb-5 fs-1" for="clave">Validar Contraseña
+                  <input type="password" id="clave2" class="form-control" placeholder="Valide su contraseña" required>
+                  <div class="invalid-feedback">
+                    La contraseña no coincide
+                  </div>
+                </label>
+                <!--BOTÓN ENVIAR-->
+                <br>
+                <div class="d-grid gap-2 d-md-block">
+                  <input type="submit" class="btn btn-lg btn-dark" id="btn_enviar_registrar" value="Regístrate">
+                  <!--IR A LOGIN-->
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-medium active" aria-current="page" onclick="toLogin()">
+                      ¿Ya tienes cuenta? Inicia Sesión</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <div class="col-md-6">
+            <div class="card card-span h-100 text-white">
+              <img class="card-img h-100" src="assets/img/gallery/bgregis.jpg" alt="..." />
+              <a class="stretched-link" href="#!"></a>
+            </div>
+          </div>
+        </div>
       </form>
       </div>
       <!-- end of .container-->

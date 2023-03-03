@@ -3676,6 +3676,7 @@ textarea.form-control.is-invalid {
   color: #424242;
 }
 
+
 .btn-check:focus + .btn,
 .btn:focus {
   outline: 0;
@@ -7966,6 +7967,7 @@ fieldset:disabled .btn {
 
 .d-inline-block {
   display: inline-block !important;
+  cursor: pointer;
 }
 
 .d-block {
@@ -9022,6 +9024,7 @@ fieldset:disabled .btn {
 
 .ms-2 {
   margin-left: 0.5rem !important;
+  cursor: pointer;
 }
 
 .ms-3 {
