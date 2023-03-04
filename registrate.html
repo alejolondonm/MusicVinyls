@@ -64,79 +64,97 @@
                 <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
                   <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Crea tu cuenta</h1>
                   <!--NOMBRE-->
-                  <label class="mb-5 fs-1" for="nombre">Nombre
-                      <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
-                      <div class="invalid-feedback">
-                        Ingresa un nombre válido
-                      </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="nombre">Nombre
+                        <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                        <div class="invalid-feedback">
+                          Ingresa un nombre válido
+                        </div>
+                    </label>
+                  </div>
                   <!--APELLIDO-->
-                  <label class="mb-5 fs-1" for="apellido">Apellido
-                    <input type="text" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
-                    <div class="invalid-feedback">
-                      Ingresa un apellido válido
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="apellido">Apellido
+                      <input type="text" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                      <div class="invalid-feedback">
+                        Ingresa un apellido válido
+                      </div>
+                    </label>
+                  </div>
                   <!--USUARIO-->
-                  <label class="mb-5 fs-1" for="apellido">Usuario
-                    <input type="text" id="usuario" class="form-control" placeholder="Ingrese su usuario" required>
-                    <div class="invalid-feedback">
-                      Ingresa un usuario válido
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="apellido">Usuario
+                      <input type="text" id="usuario" class="form-control" minlength="6" placeholder="Ingrese su usuario" required>
+                      <div class="invalid-feedback">
+                        Ingresa un usuario válido
+                      </div>
+                    </label>
+                  </div>
                   <!--CORREO-->
-                  <label class="mb-5 fs-1" for="correo">Correo electrónico
-                    <input type="email" id="email" class="form-control" placeholder="Ingrese su correo" required>
-                    <div class="invalid-feedback">
-                      Ingresa un correo válido
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="correo">Correo electrónico
+                      <input type="email" id="email" class="form-control" placeholder="Ingrese su correo" required>
+                      <div class="invalid-feedback">
+                        Ingresa un correo válido
+                      </div>
+                    </label>
+                  </div>
                   <!--CELULAR-->
-                  <label class="mb-5 fs-1" for="celular">Celular
-                    <input type="number" id="celular" class="form-control" placeholder="Ingrese su celular" required>
-                    <div class="invalid-feedback">
-                      Ingresa un celular válido
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="celular">Celular
+                      <input type="tel" id="celular" minlength="10" maxlength="10" class="form-control" placeholder="Ingrese su celular" required>
+                      <div class="invalid-feedback">
+                        Ingresa un celular válido
+                      </div>
+                    </label>
+                  </div>
                   <!--GÉNERO MUSICAL-->
-                  <label class="mb-5 fs-1" for="genero">Género Musical Favorito
-                    <select type="text" class="form-control" id="genero" required>
-                      <option value="">Seleccione uno</option>
-                      <option value="pop">Pop</option>
-                      <option value="rock">Rock</option>
-                      <option value="country">Country</option>
-                      <option value="folk">Folk</option>
-                      <option value="clasica">Clásica</option>
-                      <option value="jazz">Jazz</option>
-                      <option value="metal">Metal</option>
-                      <option value="r&b">R&B</option>
-                      <option value="hiphop">Hip hop</option>
-                      <option value="alternativo">Alternativo</option>
-                      <option value="reggaeton">Reggaeton</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Elige una de las opciones
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="genero">Género Musical Favorito
+                      <select class="form-control" id="genero" required>
+                        <option value="">Seleccione uno</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="country">Country</option>
+                        <option value="folk">Folk</option>
+                        <option value="clasica">Clásica</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="metal">Metal</option>
+                        <option value="r&b">R&B</option>
+                        <option value="hiphop">Hip hop</option>
+                        <option value="alternativo">Alternativo</option>
+                        <option value="reggaeton">Reggaeton</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Elige una de las opciones
+                      </div>
+                    </label>
+                  </div>
                   <!--CONTRASEÑA-->
-                  <label class="mb-5 fs-1" for="clave">Contraseña
-                    <input type="password" id="clave1" class="form-control" placeholder="Ingrese su contraseña" required>
-                    <div class="invalid-feedback">
-                      Ingresa una contraseña válida
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="clave">Contraseña
+                      <input type="password" id="clave1" class="form-control" placeholder="Ingrese su contraseña" required>
+                      <div class="invalid-feedback">
+                        Ingresa una contraseña válida
+                      </div>
+                    </label>
+                  </div>
                   <!--VALIDAR CONTRASEÑA-->
-                  <label class="mb-5 fs-1" for="clave">Validar Contraseña
-                    <input type="password" id="clave2" class="form-control" placeholder="Valide su contraseña" required>
-                    <div class="invalid-feedback">
-                      La contraseña no coincide
-                    </div>
-                  </label>
+                  <div class="form-group">
+                    <label class="mb-5 fs-1" for="clave">Validar Contraseña
+                      <input type="password" id="clave2" class="form-control" placeholder="Valide su contraseña" required>
+                      <div class="invalid-feedback">
+                        La contraseña no coincide
+                      </div>
+                    </label>
+                  </div>
                   <!--BOTÓN ENVIAR-->
                   <br>
                   <div class="d-grid gap-2 d-md-block">
-                    <input type="submit" class="btn btn-lg btn-dark" id="btn_enviar_registrar" value="Regístrate">
+                    <input type="submit" class="btn btn-lg btn-dark" id="btn_registro" value="Regístrate">
                     <!--IR A LOGIN-->
+                  </div>
+                  <div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item px-2">
                       <a class="nav-link fw-medium active" aria-current="page" onclick="toLogin()">
@@ -160,6 +178,24 @@
     </section>
 
   </section>
+
+  <script>
+    (() => {
+        'use strict'
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+  </script>
 
 
   

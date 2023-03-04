@@ -4217,6 +4217,8 @@ fieldset:disabled .btn {
   border-color: #00a1fc;
 }
 
+
+
 .btn-check:focus + .btn-outline-info,
 .btn-outline-info:focus {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 161, 252, 0.5);
@@ -4964,6 +4966,7 @@ fieldset:disabled .btn {
 
 .nav-link {
   display: block;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   color: #212121;
   -webkit-transition: color 0.15s ease-in-out,
@@ -8402,6 +8405,12 @@ fieldset:disabled .btn {
   justify-content: space-between;
 }
 
+.form-group.has-error input[type="text"]::after {
+  content: "!";
+  color: red;
+  font-weight: bold;
+}
+
 .flex-row-reverse {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: reverse !important;
@@ -10313,6 +10322,7 @@ fieldset:disabled .btn {
 }
 
 .text-1000 {
+  cursor: pointer;
   color: #212121 !important;
   font-size: 89%;
 }
