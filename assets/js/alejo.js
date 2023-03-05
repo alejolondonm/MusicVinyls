@@ -42,20 +42,38 @@ function registrar() {
             celular: celular.value,
             correo: correo.value,
             genero: genero.value,
-            clave: clave.value
+            clave: md5(clave.value)
         };
 
         localStorage.setItem("usuario", JSON.stringify(miUser));
         alert("¡Muy bien, registro exitoso!");
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
     }
     else if (clave.value != clave2.value) {
         alert("Las contraseñas no coinciden");
     }
 }
+/*
+function coinciden() {
 
 
+    const feedback = document.getElementById("feedback");
+    let clave = document.getElementById("clave1");
+    let clave2 = document.getElementById("clave2");
 
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+        clave2.addEventListener('keyup', event => {
+            if (clave.value != clave2.value) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+
+}
+*/
 try {
     if (form_registro) {
         form_registro.addEventListener('submit', (event) => {
@@ -77,9 +95,8 @@ if (login_form) {
 
         let user1 = document.getElementById('usuario').value;
         let psw = document.getElementById('clave').value;
-        //let hashedPass = md5(uPassword);
-
-        login(user1, psw);
+        let pswmd5 = md5(psw);
+        login(user1, pswmd5);
     });
 }
 
@@ -91,11 +108,11 @@ function login(username, clave) {
 
     if ((user.usuario === username && user.clave === clave)) {
         localStorage.setItem("logueado", true);
-        //alert('Bienvenido ' + user.nombre);
+        alert('Bienvenido ' + user.nombre);
         window.location.href = "index.html";
-    } /*else {
+    } else {
         alert("Revise los datos");
-    }*/
+    }
 }
 
 
@@ -176,8 +193,6 @@ function logingout() {
     localStorage.setItem("logueado", false);
     location.reload(true);
 }
-
-const img_perfilapi = "../assets/img/gallery/foto.png";
 
 function logingoutromapi() {
 
