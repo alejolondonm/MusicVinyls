@@ -9470,6 +9470,8 @@ fieldset:disabled .btn {
   padding-left: 0.5rem !important;
 }
 
+
+
 .px-3 {
   padding-right: 1rem !important;
   padding-left: 1rem !important;
@@ -10326,6 +10328,33 @@ fieldset:disabled .btn {
   color: #212121 !important;
   font-size: 89%;
 }
+
+.text-1000#nombre-perfil {
+  cursor: default;
+  color: #212121 !important;
+  font-size: 93%;
+}
+
+.text-1000#logout {
+  cursor: pointer;
+  color: rgb(26, 25, 110) !important;
+  font-size: 89%;
+  text-decoration: underline;
+  text-decoration-color: rgb(26, 25, 110);
+  text-underline-offset: 3px;
+}
+
+.dialog {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
 
 .text-white {
   color: #fffefe !important;

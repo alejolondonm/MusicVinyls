@@ -142,11 +142,10 @@
                   <!--VALIDAR CONTRASEÑA-->
                   <div class="form-group">
                     <label class="mb-5 fs-1" for="clave">Validar Contraseña
-                      <input type="password" id="clave2" class="form-control" placeholder="Valide su contraseña" required>
-                      <div class="invalid-feedback">
-                        La contraseña no coincide
-                      </div>
-                    </label>
+                      <input type="password" id="clave2" class="form-control" placeholder="Valide su contraseña" required onkeyup="coinciden()">
+                        <div class="invalid-feedback">
+                          La contraseña no coincide
+                        </div>
                   </div>
                   <!--BOTÓN ENVIAR-->
                   <br>
@@ -195,7 +194,7 @@
             }, false);
         });
     })();
-  </script>
+  </script> 
 
 
   

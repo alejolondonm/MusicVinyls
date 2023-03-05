@@ -1,14 +1,19 @@
-let frm_registro, home;
-let btn_iniciar_sesion;
-let img_perfil = "https://icons.iconarchive.com/icons/saviourmachine/chat/48/music-icon.png";
+//Definición de Variables y constantes
+//const img_perfil = "https://icons.iconarchive.com/icons/saviourmachine/chat/48/music-icon.png";
+const img_perfil = "assets/img/gallery/foto.png";
+//const inicio = document.getElementById('iniciosesion');
+const inicio = document.getElementById("iniciosesion");
+const registro = document.getElementById("btn_enviar_registro");
+const cierre = document.getElementById('logout');
+const form_registro = document.getElementById('form_registro');
+const btn_iniciar_sesion = document.getElementById("btn_iniciar_sesion");
+const login_form = document.getElementById('frm_login');
+const mifoto = document.getElementById("mifoto");
 
 window.onload = init;
 
 function init() {
-
     func_ocultar();
-
-    btn_iniciar_sesion = document.getElementById("btn_iniciar_sesion");
     btn_enviar.addEventListener("click", login);
 
 }
@@ -29,6 +34,7 @@ function registrar() {
     if (nombre.value != "" && apellido.value != "" && usuario.value != "" &&
         celular.value != "" && correo.value != "" && genero.value != "" &&
         clave.value != "" && clave2.value != "" && clave.value === clave2.value) {
+
         miUser = {
             nombre: nombre.value,
             apellido: apellido.value,
@@ -38,15 +44,17 @@ function registrar() {
             genero: genero.value,
             clave: clave.value
         };
-        localStorage.setItem("usuario", JSON.stringify(miUser));
-        //alert("¡Muy bien, registro exitoso!");
-        //window.location.href = 'index.html';
-    }
 
+        localStorage.setItem("usuario", JSON.stringify(miUser));
+        alert("¡Muy bien, registro exitoso!");
+        window.location.href = 'index.html';
+    }
+    else if (clave.value != clave2.value) {
+        alert("Las contraseñas no coinciden");
+    }
 }
 
-//Función activada con el submit
-const form_registro = document.getElementById('form_registro');
+
 
 try {
     if (form_registro) {
@@ -59,9 +67,9 @@ try {
     console.log(error);
 }
 
+//<!-----------------------------------------------------------------------------------------------¡>
 //PARA EL LOGIN
 //Función activada con el submit
-const login_form = document.getElementById('frm_login');
 
 if (login_form) {
     login_form.addEventListener('submit', (event) => {
@@ -83,7 +91,7 @@ function login(username, clave) {
 
     if ((user.usuario === username && user.clave === clave)) {
         localStorage.setItem("logueado", true);
-        alert('Bienvenido ' + user.nombre);
+        //alert('Bienvenido ' + user.nombre);
         window.location.href = "index.html";
     } /*else {
         alert("Revise los datos");
@@ -91,9 +99,7 @@ function login(username, clave) {
 }
 
 
-const inicio = document.getElementById('iniciosesion');
-const registro = document.getElementById("btn_enviar_registro");
-const cierre = document.getElementById('cierresesion');
+//<!-----------------------------------------------------------------------------------------------¡>
 
 const navigateTo = (url) => {
     location.href = url;
@@ -104,17 +110,18 @@ registro.addEventListener('click', () => {
     irARegistro();
 });
 
-inicio.addEventListener('click', () => {
+inicio.addEventListener("click", () => {
+    alert("click en iniciar sesión");
     console.log("click en iniciar sesión");
-    navigateTo('login.html');
+    window.location.href = "login.html";
 });
 
-cierre.addEventListener('click', () => {
-    console.log("click en cerrar sesión");
-    //localStorage.removeItem("logueado");
-    //func_ocultar();
-    //navigateTo('index.html');
+cierre.addEventListener("click", () => {
+    alert("click en cerrar sesión");
+    //console.log("click en iniciar sesión");
+    //window.location.href = "login.html";
 });
+
 
 
 
@@ -141,18 +148,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Para ocultar el botón de inicio sesión
 function func_ocultar() {
+    let usuario_ls = localStorage.getItem("usuario");
+
+    let user = JSON.parse(usuario_ls);
+    let html;
+
     if (localStorage.getItem('logueado') === 'true') {
-        const showElement = document.getElementById('cierresesion')
+        const showElement = document.getElementById('logout')
         const elementToHide = document.getElementById('iniciosesion');
         elementToHide.style.display = 'none';
         showElement.style.display = 'block';
+        html = `<a class = "text-1000" id="nombre-perfil">¡Bienvenid@ ${user.usuario}!&nbsp;</a><img src="${img_perfil}" /><a>&nbsp;</a>`
+        mifoto.innerHTML = html;
+
+
     } else {
         const showElement = document.getElementById('iniciosesion')
-        const elementToHide = document.getElementById('cierresesion');
+        const elementToHide = document.getElementById('logout');
         elementToHide.style.display = 'none';
         showElement.style.display = 'block';
 
     }
+}
+
+function logingout() {
+
+    localStorage.setItem("logueado", false);
+    location.reload(true);
+}
+
+const img_perfilapi = "../assets/img/gallery/foto.png";
+
+function logingoutromapi() {
+
+    localStorage.setItem("logueado", false);
+    location.href = "../index.html";
 }
 
 //Resetear el formulario del login e ir a registrate
@@ -195,8 +225,12 @@ function toVinyls() {
 }
 
 function toAPI() {
-    //let isLogged = localStorage.getItem("isLogged");
+    let log = localStorage.getItem("logueado");
 
-    //if (isLogged === 'true')
-    location.href = "spotifyapi/playlist.html";
+    if (localStorage.getItem('logueado') === 'true')
+        location.href = "spotifyapi/playlist.html";
+    else {
+        alert("Debe iniciar sesión para entrar");
+        location.href = "login.html";
+    }
 }
