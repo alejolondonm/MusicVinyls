@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (apiSpotify) {
         apiSpotify.addEventListener('click', () => {
             if (logueado === 'true') {
-                window.location.href = 'spotifyapi/playlist.html';
+                window.location.href = 'playlist.html';
             } else {
                 alert('Debes crear una cuenta para buscar playlists')
                 return window.location.href = 'register.html';
@@ -243,7 +243,7 @@ function toAPI() {
     let log = localStorage.getItem("logueado");
 
     if (localStorage.getItem('logueado') === 'true')
-        location.href = "spotifyapi/playlist.html";
+        location.href = "playlist.html";
     else {
         alert("Debe iniciar sesión para entrar");
         location.href = "login.html";
