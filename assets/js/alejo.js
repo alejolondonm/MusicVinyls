@@ -9,14 +9,15 @@ const form_registro = document.getElementById('form_registro');
 const btn_iniciar_sesion = document.getElementById("btn_iniciar_sesion");
 const login_form = document.getElementById('frm_login');
 const mifoto = document.getElementById("mifoto");
+const mifotoapi = document.getElementById('mifotoapi');
 
 window.onload = init;
 
 function init() {
     func_ocultar();
     btn_enviar.addEventListener("click", login);
-
 }
+
 
 //Registrar usuarios
 function registrar() {
@@ -115,6 +116,7 @@ function login(username, clave) {
     }
 }
 
+showlogapi();
 
 //<!-----------------------------------------------------------------------------------------------¡>
 
@@ -139,9 +141,6 @@ cierre.addEventListener("click", () => {
     //window.location.href = "login.html";
 });
 
-
-
-
 // Comprobación de logueo de un usuario
 // En este caso, será del API de Spotify
 document.addEventListener('DOMContentLoaded', function () {
@@ -159,14 +158,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-
 });
-
 
 //Para ocultar el botón de inicio sesión
 function func_ocultar() {
     let usuario_ls = localStorage.getItem("usuario");
-
     let user = JSON.parse(usuario_ls);
     let html;
 
@@ -178,13 +174,11 @@ function func_ocultar() {
         html = `<a class = "text-1000" id="nombre-perfil">¡Bienvenid@ ${user.usuario}!&nbsp;</a><img src="${img_perfil}" /><a>&nbsp;</a>`
         mifoto.innerHTML = html;
 
-
     } else {
         const showElement = document.getElementById('iniciosesion')
         const elementToHide = document.getElementById('logout');
         elementToHide.style.display = 'none';
         showElement.style.display = 'block';
-
     }
 }
 
@@ -194,10 +188,17 @@ function logingout() {
     location.reload(true);
 }
 
-function logingoutromapi() {
+function showlogapi() {
+    const mifotoapi = document.getElementById('mifotoapi');
+    let usuario_ls = localStorage.getItem("usuario");
+    let user = JSON.parse(usuario_ls);
+    let htmlapi = `<a class = "text-1000" id="nombre-perfil">¡Bienvenid@ ${user.usuario}!&nbsp;</a><img src="${img_perfil}" /><a>&nbsp;</a>`
+    mifotoapi.innerHTML = htmlapi;
+}
 
+function logoutapi() {
     localStorage.setItem("logueado", false);
-    location.href = "../index.html";
+    location.href = "index.html";
 }
 
 //Resetear el formulario del login e ir a registrate
